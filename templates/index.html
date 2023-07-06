@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoxPop</title>
+</head>
+<body>
+    <a href = "/comment"> Send comment </a>
+    <br>
+    <table>
+
+    <tr>
+        <th>Text</th>
+        <th>Comment Type</th>
+    </tr>
+    {%for comment in comments%}
+         <tr>
+            <td>{{comment.text}}</td>
+            <td>{{comment.type}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
