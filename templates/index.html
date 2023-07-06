@@ -7,19 +7,19 @@
 </head>
 <body>
     <a href = "/comment"> Send comment </a>
-    <br>
-    <table>
+    <hr>
 
-    <tr>
-        <th>Text</th>
-        <th>Comment Type</th>
-    </tr>
     {%for comment in comments%}
-         <tr>
-            <td>{{comment.text}}</td>
-            <td>{{comment.type}}</td>
-        </tr>
+            <p><b>Comment Text: </b> {{comment.text}}</p>
+            <p><b>Type of comment: </b> {{comment.type}}</p>
+            <hr>
+     {% endfor %}
+
+
+    <label>Pages</label>
+    {% for i in range(pages) %}
+        <a href = "/?page={{i + 1}}">{{i + 1}}</a>
     {% endfor %}
-    </table>
+   
 </body>
 </html>
